@@ -1,0 +1,72 @@
+localsivanlinux:
+  # Configure available database sessions. (required)
+  sessions:
+    # Defines the default session. (required)
+    default:
+      user: userdb
+      password: '123456'
+      database: feelikeAgent-dev
+      hosts:
+        - localhost:27017
+      options:
+  options:
+    allow_dynamic_fields: true
+    identity_map_enabled: false
+    include_root_in_json: false
+localsivanwindows:
+  # Configure available database sessions. (required)
+  sessions:
+    # Defines the default session. (required)
+    default:
+      user: userdb
+      password: '123456'
+      database: feelikeAgent-dev
+      hosts:
+        - localhost:27017
+      options:
+  options:
+    allow_dynamic_fields: true
+    identity_map_enabled: false
+    include_root_in_json: false
+development:
+  # Configure available database sessions. (required)
+  sessions:
+    # Defines the default session. (required)
+    default:
+      user: userdb
+      password: '123456'
+      database: feelikeAgent-dev
+      hosts:
+        - localhost:27017
+      options:
+  options:
+    allow_dynamic_fields: true
+    identity_map_enabled: false
+    include_root_in_json: false
+test:
+  sessions:
+    default:
+      database: feelike_agent_test
+      hosts:
+        - localhost:27017
+      options:
+        consistency: :strong
+        # In the test environment we lower the retries and retry interval to
+        # low amounts for fast failures.
+        max_retries: 1
+        retry_interval: 0
+production:
+  # Configure available database sessions. (required)
+  sessions:
+    # Defines the default session. (required)
+    default:
+      user: userdb
+      password: '123456'
+      database: feelikeAgent-dev
+      hosts:
+        - localhost:27017
+      options:
+  options:
+    allow_dynamic_fields: true
+    identity_map_enabled: false
+    include_root_in_json: false
